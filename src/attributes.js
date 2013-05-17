@@ -13,6 +13,14 @@ jQuery.fn.extend({
 			jQuery.removeAttr( this, name );
 		});
 	},
+	
+	disable: function() {
+		return this.attr( 'disabled', 'disabled' );	
+	},
+	
+	enable: function() {
+		return this.removeAttr( 'disabled' );
+	},
 
 	prop: function( name, value ) {
 		return jQuery.access( this, jQuery.prop, name, value, arguments.length > 1 );
